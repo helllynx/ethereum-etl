@@ -10,14 +10,14 @@ def read(fname):
 long_description = read('README.md') if os.path.isfile("README.md") else ""
 
 setup(
-    name='ethereum-etl',
-    version='1.6.3',
+    name='ethereum-etl-updated',
+    version='1.6.4.1',
     author='Evgeny Medvedev',
     author_email='evge.medvedev@gmail.com',
     description='Tools for exporting Ethereum blockchain data to CSV or JSON',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/blockchain-etl/ethereum-etl',
+    url='https://github.com/helllynx/ethereum-etl',
     packages=find_packages(exclude=['schemas', 'tests']),
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -33,13 +33,13 @@ setup(
     # web3.py doesn't work on 3.5.2 and less (https://github.com/ethereum/web3.py/issues/1012)
     python_requires='>=3.5.3,<4',
     install_requires=[
-        'web3==4.7.2',
-        'eth-utils==1.8.4',
-        'eth-abi==1.3.0',
+        'web3==5.21.0',
+        'eth-utils==1.10.0',
+        'eth-abi==2.1.1',
         # TODO: This has to be removed when "ModuleNotFoundError: No module named 'eth_utils.toolz'" is fixed at eth-abi
-        'python-dateutil==2.7.0',
-        'click==7.0',
-        'ethereum-dasm==0.1.4',
+        'python-dateutil==2.8.1',
+        'click==8.0.1',
+        'ethereum-dasm==0.1.5',
         'base58',
         'requests',
     ],
